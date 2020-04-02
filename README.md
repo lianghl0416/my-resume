@@ -11,4 +11,4 @@
 
 1. git 初始化仓库
     git init
-    
+    git clone xxx
