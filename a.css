@@ -108,7 +108,7 @@ position: relative;
     display:block ;
     position: relative;
 }
-.topnavbar  nav > ul > li > a:hover::after {
+.topnavbar  nav > ul > li.active > a::after {
     content:'';
     display: block;
     position: absolute;
@@ -130,14 +130,27 @@ position: relative;
 .topnavbar .submenu{
     display: none;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
+    background: white;
+    color:#3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5));
    }
-.topnavbar .submenu.active{
+.topnavbar li.active> .submenu{
     display: block;
+    animation: submenuSlide 0.3s;
 }
-.topnavbar .submenu>li{
+@keyframes submenuSlide{
+    0%{
+       margin-right: 100%;
+    }
+    100%{
+        margin-right: 0%;
+    }
+}
+.topnavbar .submenu > li{
     white-space: nowrap;
+    padding: 5px 10px;
 }
 .topnavbar .logo{
     font-size: 24px;
