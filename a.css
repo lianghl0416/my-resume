@@ -38,6 +38,7 @@
     align-items: center;
 }
 
+
 .site-welcome.active{
     display: flex;
 }
@@ -93,6 +94,7 @@ transition: all 0.5s;color:#B7B7B7;
 float: left; 
 margin-right: 17px;
 margin-left: 17px;
+position: relative;
 }
 .topnavbar  nav > ul > li > a{
     font-size: 12px;
@@ -104,9 +106,38 @@ margin-left: 17px;
     padding-top: 5px;
     padding-bottom: 5px;
     display:block ;
+    position: relative;
 }
-.topnavbar  nav > ul > li > a:hover{
-border-bottom: 3px solid #e06567; 
+.topnavbar  nav > ul > li > a:hover::after {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0 ;
+    width: 100%;
+    background:  #e06567; 
+    height: 3px;
+    animation: menuSlide 0.3s;
+}
+@keyframes menuSlide{
+    0%{
+        width: 0 ;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.topnavbar .submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+   }
+.topnavbar .submenu.active{
+    display: block;
+}
+.topnavbar .submenu>li{
+    white-space: nowrap;
 }
 .topnavbar .logo{
     font-size: 24px;
