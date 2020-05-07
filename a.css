@@ -211,7 +211,7 @@ color:#9A9DA2 ;
     padding: 50px 50px;
 }
 .percard .text h1{
-margin-top: 18px;
+margin-top: 10px;
 }
 .percard .text hr{
     margin: 20px 0;
@@ -232,6 +232,24 @@ color: #9da0a7;
 }
 .percard > footer.media{
     background: #E6686A;
+    text-align: center;
+}
+.percard > footer.media > a{
+    width:  40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 16px;
+}
+.percard > footer.media > a:hover{
+    background: #CF5D5F;
+}
+.percard svg{
+    width:30px;
+    height:30px;
+    fill: white;
+    vertical-align: top;
 }
 .margin-top{
     margin-top: -330px;
