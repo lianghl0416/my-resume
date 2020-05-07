@@ -68,6 +68,9 @@ ul,ol{
     display:block;
     clear:both;
 }
+[data-x].active{
+    outline: 10px solid red;
+}
 .topnavbar{
 padding:20px 0;
 position:fixed;
